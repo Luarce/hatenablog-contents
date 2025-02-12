@@ -1,0 +1,2 @@
+# MarkdownファイルをLinguistで検出可能にする
+*.md linguist-detectable=true

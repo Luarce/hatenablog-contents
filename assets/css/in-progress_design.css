@@ -1,0 +1,119 @@
+/* <system section="theme" selected="smooth"> */
+@import "/css/theme/smooth/smooth.css";
+/* </system> */
+
+/*-------------*/
+/*  追尾する目次  */
+/*-------------*/
+
+/* 目次サイドバーはスマホ側非表示 */
+@media screen and (max-width:767px) {
+    #box2-inner .hatena-module:last-child {
+        display: none;
+    }
+}
+
+#stoc-module {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#stoc-module.tracking {
+    margin-bottom: 0;
+}
+
+#stoc-module.fixed {
+    position: fixed;
+}
+
+#stoc-module.absolute {
+    position: absolute;
+}
+
+#stoc-module.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+#stoc-module.fade-in {
+    animation: fadeIn 300ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+#stoc {
+    overflow-y: auto;
+}
+
+#stoc.shadow {
+    /* Shadows */
+    background:
+        radial-gradient(farthest-side at top, rgba(0, 0, 0, .17), transparent) top / 100% 11px,
+        radial-gradient(farthest-side at bottom, rgba(0, 0, 0, .17), transparent) bottom / 100% 11px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+#stoc ol {
+    margin: 0;
+    padding: 0 0 0 1em;
+    list-style-type: none;
+}
+
+#stoc>ol {
+    padding-left: 0;
+}
+
+#stoc.shadow>ol {
+    /* Shadow covers */
+    background:
+        linear-gradient(#fff 30%, transparent) top / 100% 40px,
+        linear-gradient(transparent, #fff 70%) bottom / 100% 40px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    overflow-y: hidden;
+}
+
+
+#stoc a {
+    padding: 2px 2px 2px 6px;
+    display: block;
+    text-decoration: none;
+    /* color: #777; */
+}
+
+#stoc:not(.touch) a:hover {
+    background-color: rgba(0, 0, 0, .05);
+    /* text-decoration: underline; */
+    /* color: #222; */
+}
+
+#stoc .active {
+    background-color: rgba(0, 0, 0, .05);
+    /* color: #222; */
+}
+
+#stoc::-webkit-scrollbar {
+    width: 8px;
+    background: #ececec;
+}
+
+#stoc::-webkit-scrollbar-button {
+    display: none;
+}
+
+#stoc::-webkit-scrollbar-thumb {
+    background: #b1b1b1;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0;
+}
