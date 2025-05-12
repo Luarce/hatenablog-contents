@@ -10,7 +10,7 @@
                 * 部位硬度補正
                 * 属性耐性補正
 ```
-これを総ヒット数繰り返す
+これをヒット数繰り返す
 
 #### ステータス
 
@@ -68,14 +68,14 @@
 
 ```plaintext
 加算ボーナス = 100%
-                + ElementDmg
-                + PositionDmg
-                + KillerDmg
-                + Start.Arts-Attack
-                + 属性攻撃Upバフ
-                + アーツ特攻
-                + 会心補正
-                + その他
+            + ElementDmg
+            + PositionDmg
+            + KillerDmg
+            + Start.Arts-Attack
+            + 属性攻撃Upバフ
+            + アーツ特攻
+            + 会心補正
+            + その他
 ```
 **ElementDmg**と**Start.Arts-Attack**で盛ることで大きくダメージを伸ばせる
 
