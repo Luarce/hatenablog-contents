@@ -2,17 +2,36 @@
 @import "/css/theme/smooth/smooth.css";
 /* </system> */
 
-/* スマホでの表示 */
-@media (max-width: 767px) {
+/* --- コードブロックの色替え --- */
+.entry-content pre {
+    border: none;
+    font-size: 15px;
+    /* 文字サイズ */
+    line-height: 1.2;
+    /* 行の高さ */
+    background: #F7F6F3;
+    color: #333;
+    position: relative;
 
-    .entry-content,
-    .contents,
-    .switch,
-    .table-of-contents li,
-    .table-of-contents ul {
-        font-size: 16px;
-    }
+    white-space: pre;
+    /* 空白文字と改行を保持し、折り返さない */
+
+    margin: 0;
+    /* <pre>タグのデフォルトのマージンをリセット */
+    padding: 10px;
+    /* 必要に応じて内側の余白を追加 */
+    white-space: pre;
+    /* 空白文字と改行を保持し、折り返さない */
+    font-family: monospace, sans-serif;
+    /* 等幅フォントを指定 */
+    font-size: 0.9em;
+    /* 必要に応じてフォントサイズを調整 */
+    line-height: 1.4;
+    /* 必要に応じて行間を調整 */
+
 }
+
+
 
 
 /* 目次関連 */
@@ -85,8 +104,13 @@ h5 {
     padding-left: 15px;
     /* 縦線の太さ */
     border-left: 4px solid;
+
+    border-bottom: 1px solid #333;
+
     /* 上の余白 */
     padding-top: 10px;
+    /* 背景色 */
+    background-color: rgb(248, 248, 248);
 }
 
 /* h3のスタイル */
@@ -99,18 +123,23 @@ h3 {
 
 /* h4のスタイル */
 h4 {
+    padding-bottom: 8px;
     /* 緑色の縦線 */
     border-color: #2ecc71;
+
+    border-bottom: 1px solid #CFD8D8;
+
     /* h4の文字サイズ */
     font-size: 1.4em;
-    /* 上の余白 */
-    padding-top: 5px;
 }
 
 /* h5のスタイル */
 h5 {
     /* オレンジ色の縦線 */
     border-color: #f39c12;
+
+    border-bottom: 1px solid #CFD8D8;
+
     /* h5の文字サイズ */
     font-size: 1.2em;
 }
@@ -121,7 +150,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     /* 上部に余白を追加 */
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 th,

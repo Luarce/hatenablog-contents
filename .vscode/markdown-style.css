@@ -5,10 +5,38 @@ body,
 }
 
 /* コードブロックの背景色だけ例外設定 */
-.markdown-body pre,
+/* .markdown-body pre,
 .markdown-body code {
     background-color: #1C1E23;
+} */
+
+.markdown-body pre {
+    border: none;
+    font-size: 15px;
+    /* 文字サイズ */
+    line-height: 1.2;
+    /* 行の高さ */
+    background: #F7F6F3;
+    color: #333;
+    position: relative;
+
+    white-space: pre;
+    /* 空白文字と改行を保持し、折り返さない */
+
+    margin: 0;
+    /* <pre>タグのデフォルトのマージンをリセット */
+    padding: 10px;
+    /* 必要に応じて内側の余白を追加 */
+    white-space: pre;
+    /* 空白文字と改行を保持し、折り返さない */
+    font-family: monospace, sans-serif;
+    /* 等幅フォントを指定 */
+    font-size: 0.9em;
+    /* 必要に応じてフォントサイズを調整 */
+    line-height: 1.4;
+    /* 必要に応じて行間を調整 */
 }
+
 
 .markdown-body h3 {
     font-size: 22px;

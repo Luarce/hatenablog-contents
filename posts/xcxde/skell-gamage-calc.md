@@ -12,7 +12,9 @@
 ```
 これをヒット数繰り返す
 
-#### ステータス
+#### 攻撃力 : AttackStat
+
+格闘力・射撃力・潜在力の部分
 
 ```plaintext
 ステータス = ( 基礎ステータス + SpecUp-POW )
@@ -23,41 +25,43 @@
 - Boost-POW：最大`100%`
 - ドライブ：最大`100%`
 - 心機一体 Lv5：`14%`
-最大3.14倍
 
-格闘力・射撃力・潜在力の部分
+最大`3.14`倍
+
+
 
 これらは装備するとステータス画面に即時反映される
 
-#### ステータスバフ
+#### 攻撃力バフ : AttackBuffTotal
 
 
-
-#### アーツ倍率（%）
+#### アーツ倍率（%） : HitScaling
 ドールの各アーツ倍率はゲーム内では確認不可
 
 オートアタックの場合、アーツ倍率は以下のように計算
+
 - ドール格闘AAのアーツ倍率：`100%`
 - ドール射撃AAのアーツ倍率：`100% / 弾数`
 
-**Diskbom**に**Custom.WP-MSL-MAG Ⅹ**をつけた場合、弾数は**33**発のため、アーツ倍率は約**3**%となる。
+**Diskbom**に**Custom.WP-MSL-MAG Ⅹ**をつけた場合、  
+弾数は**33**発のため、アーツ倍率は約**3**%となる。
 
 
-#### 武器攻撃力
+#### 武器攻撃力 : WeaponAttack
 
 ```plaintext
 武器攻撃力 = 基礎武器攻撃力 * ( 100% + WEAPON-POW )
 ```
-**Custom.WEAPON-POW ⅩⅩ**3つで最大2.2倍
+**Custom.WEAPON-POW ⅩⅩ**3つで最大2.2倍  
 **Drillpile**はアーツ倍率の割に武器攻撃力が低いため、格闘力を盛る方が良い
 
-#### 安定性
+#### 安定性 : Stability
 
 武器攻撃力に掛かる乱数
 
 武器攻撃力が高い武器は、安定性をあえて下げることで最大ダメージを大きく伸ばせる
 
-#### 乱数補正（％）
+#### 乱数補正（％） : Damage fluctuates
 
 ```plaintext
 乱数補正 = 100% + ( 0% ~ 5% )
@@ -65,7 +69,7 @@
 
 ダメージ全体に掛かる乱数
 
-#### 加算ボーナス（%）
+#### 加算ボーナス（%） : AdditiveBonuses
 
 ```plaintext
 加算ボーナス = 100%
@@ -83,10 +87,11 @@
 擬態している敵は範囲アーツで巻き込むか、**KillerDmg**が有効
 
 会心補正はここに加算されるだけなので、他のゼノブレイドシリーズに比べて重要度は低い
+
 - 基礎会心補正：`25%`
 - 基礎会心確率：`5%`
 
-#### 部位硬度補正（%）
+#### 部位硬度補正（%） : AppendageHardness
 ```plaintext
 部位硬度補正 = 100% + ダメージ減衰
 ```
@@ -110,14 +115,21 @@
 
 - 本体の部位硬度：`±0`
 
-#### 属性耐性補正
+##### 属性耐性補正 : AttributeResistanceTotal
 
 ```plaintext
 属性耐性補正 = 100% + 敵属性耐性 + 耐性ダウン
 ```
 
+
 ### 参考
-- https://www.xenoserieswiki.org/wiki/Damage_(XCX)
-- https://www.xenoserieswiki.org/wiki/Auto-attack_(XCX)
-- https://www.xenoserieswiki.org/wiki/Custom.WP-MSL-MAG
-- https://www.xenoserieswiki.org/wiki/Appendage
+
+1. https://www.xenoserieswiki.org/wiki/Damage_(XCX)
+1. https://www.xenoserieswiki.org/wiki/Auto-attack_(XCX)
+1. https://www.xenoserieswiki.org/wiki/Custom.WP-MSL-MAG
+1. https://www.xenoserieswiki.org/wiki/Appendage
+
+
+<style>
+@import url("../../assets/css/hatena-design.css");
+</style>
