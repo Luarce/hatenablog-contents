@@ -1,61 +1,258 @@
 body,
 .markdown-body {
     background-color: white;
-    color: black;
+    color: rgb(0, 0, 0);
+
+    pre,
+    code {
+
+        border: none;
+        font-size: 15px;
+        /* 文字サイズ */
+        line-height: 1.2;
+        /* 行の高さ */
+        background: #F7F6F3;
+        color: #333;
+        position: relative;
+
+        white-space: pre;
+        /* 空白文字と改行を保持し、折り返さない */
+        /*font-family: monospace, sans-serif;*/
+        /* 等幅フォントを指定 */
+        /*font-size: 0.9em;*/
+        /* 必要に応じてフォントサイズを調整 */
+        line-height: 1.4;
+        /* 必要に応じて行間を調整 */
+    }
 }
 
-/* コードブロックの背景色だけ例外設定 */
-/* .markdown-body pre,
-.markdown-body code {
-    background-color: #1C1E23;
-} */
+/* hatena-design.cssの部分を張り付ける */
+.markdown-body {
 
-.markdown-body pre {
-    border: none;
-    font-size: 15px;
-    /* 文字サイズ */
-    line-height: 1.2;
-    /* 行の高さ */
-    background: #F7F6F3;
-    color: #333;
-    position: relative;
+    /* <system section="theme" selected="smooth"> */
+    @import "/css/theme/smooth/smooth.css";
+    /* </system> */
 
-    white-space: pre;
-    /* 空白文字と改行を保持し、折り返さない */
+    /* --- コードブロックの色替え --- */
+    .entry-content pre {
+        border: none;
+        font-size: 15px;
+        /* 文字サイズ */
+        line-height: 1.2;
+        /* 行の高さ */
+        background: #F7F6F3;
+        color: #333;
+        position: relative;
 
-    margin: 0;
-    /* <pre>タグのデフォルトのマージンをリセット */
-    padding: 10px;
-    /* 必要に応じて内側の余白を追加 */
-    white-space: pre;
-    /* 空白文字と改行を保持し、折り返さない */
-    font-family: monospace, sans-serif;
-    /* 等幅フォントを指定 */
-    font-size: 0.9em;
-    /* 必要に応じてフォントサイズを調整 */
-    line-height: 1.4;
-    /* 必要に応じて行間を調整 */
-}
+        font-family: monospace, sans-serif;
+
+        white-space: pre;
+        /* 空白文字と改行を保持し、折り返さない */
+
+        line-height: 1.4;
+        /* 必要に応じて行間を調整 */
+
+    }
+
+    /* 目次関連 */
+    .contents {
+        /*padding: 5px;*/
+        font-weight: bold;
+
+        /* 見出し部分をクリックしても反応しないようにする */
+        cursor: default;
+    }
+
+    .switch {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #0E7AD9;
+        /* タイトルから少し間隔を空ける */
+        margin-left: 10px;
+    }
+
+    .table-of-contents {}
+
+    .table-of-contents li {
+        padding-left: 5px;
+        margin-top: 5px;
+        /* リスト項目間の余白を追加 */
+        margin-bottom: 5px;
+    }
+
+    .table-of-contents ul {}
 
 
-.markdown-body h3 {
-    font-size: 22px;
-}
+    /* 目次を階層連番にする */
+    ul.table-of-contents,
+    .table-of-contents ul {
+        counter-reset: item;
+        list-style: none;
+    }
 
-.markdown-body h4 {
-    font-size: 20px;
-}
+    .table-of-contents li:before {
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+    }
 
-.markdown-body h5 {
-    font-size: 18px;
-}
 
-img {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-}
+    /* タイトル */
+    .entry-title {
+        /* 縦線の余白 */
+        padding-left: 20px;
+        /* タイトルの文字サイズ */
+        font-size: 2em;
+        /* タイトルの縦線色 */
+        /* border-left: 6px solid #1abc9c; */
+        /* 行の高さを調整 */
+        line-height: 1.4;
+        /* タイトルの上の余白 */
+        padding-top: 3px;
+    }
 
-h3,
-h5 {
-    padding-bottom: 0.4em !important;
-    border-bottom: solid 1px gray !important;
+
+    /* h3, h4, h5の共通スタイル */
+    h3,
+    h4,
+    h5 {
+        /* 縦線の余白 */
+        padding-left: 15px;
+        /* 縦線の太さ */
+        border-left: 4px solid;
+
+        border-bottom: 1px solid #333;
+
+        /* 上の余白 */
+        padding-top: 10px;
+        /* 背景色 */
+        background-color: rgb(248, 248, 248);
+    }
+
+    /* h3のスタイル */
+    h3 {
+        /* 青色の縦線 */
+        border-color: #3498db;
+
+        border-bottom: 1px solid #CFD8D8;
+
+        /* h3の文字サイズ */
+        font-size: 1.6em;
+    }
+
+    /* h4のスタイル */
+    h4 {
+        padding-bottom: 8px;
+        /* 緑色の縦線 */
+        border-color: #2ecc71;
+
+        border-bottom: 1px solid #CFD8D8;
+
+        /* h4の文字サイズ */
+        font-size: 1.4em;
+    }
+
+    /* h5のスタイル */
+    h5 {
+        /* オレンジ色の縦線 */
+        border-color: #f39c12;
+
+        border-bottom: 1px solid #CFD8D8;
+
+        /* h5の文字サイズ */
+        font-size: 1.2em;
+    }
+
+    /* テーブルスタイル */
+    table {
+        /* ボーダーを重ねて表示 */
+        width: 100%;
+        border-collapse: collapse;
+        /* 上部に余白を追加 */
+        margin-bottom: 10px;
+    }
+
+    th,
+    td {
+        /* セルのボーダーを追加 */
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        /* 列見出しは中央揃え */
+        text-align: center;
+
+        background-color: #f0f0f0;
+        /* 見出し行の背景色 */
+        font-weight: bold;
+        /* 見出しを太字に */
+        border-bottom: 2px solid #333;
+        /* 見出しの下に太いボーダー */
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        /* 一番左の列は改行無し */
+        white-space: nowrap;
+        /* 一番左の列は中央揃え */
+        text-align: center;
+    }
+
+    thead {
+        /* ヘッダーの背景色 */
+        background-color: #f8f8f8;
+    }
+
+    /* 画像に枠線をつける */
+    .entry-content img {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .entry-content a {
+        text-decoration: underline;
+    }
+
+
+    /* アニメタイトル画像にキャプションをつける */
+    .anime_title {
+        position: relative;
+        display: inline-block;
+    }
+
+    .anime_image {
+        display: block;
+    }
+
+    .anime_caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 2px;
+        background-color: rgba(128, 128, 128, 0.7);
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* ネタバレ防止 */
+    .spoiler_details {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    /* youtube埋め込み */
+    .box_youtube {
+        aspect-ratio: 16/9;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
 }

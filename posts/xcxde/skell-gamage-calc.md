@@ -1,4 +1,6 @@
-## ドールダメージ計算 : XenobladeX DE
+<img class="thumbnail" src="thumbnail-url" alt="thumbnail-alt">
+
+[:contents]
 
 ### 計算式
 
@@ -12,7 +14,7 @@
 ```
 これをヒット数繰り返す
 
-#### 攻撃力 : AttackStat
+#### ステータス : AttackStat
 
 格闘力・射撃力・潜在力の部分
 
@@ -32,10 +34,10 @@
 
 これらは装備するとステータス画面に即時反映される
 
-#### 攻撃力バフ : AttackBuffTotal
+#### ステータスバフ : AttackBuffTotal
 
 
-#### アーツ倍率（%） : HitScaling
+#### アーツ倍率 : HitScaling
 ドールの各アーツ倍率はゲーム内では確認不可
 
 オートアタックの場合、アーツ倍率は以下のように計算
@@ -61,7 +63,7 @@
 
 武器攻撃力が高い武器は、安定性をあえて下げることで最大ダメージを大きく伸ばせる
 
-#### 乱数補正（％） : Damage fluctuates
+#### 乱数補正 : Damage fluctuates
 
 ```plaintext
 乱数補正 = 100% + ( 0% ~ 5% )
@@ -69,7 +71,7 @@
 
 ダメージ全体に掛かる乱数
 
-#### 加算ボーナス（%） : AdditiveBonuses
+#### 加算ボーナス : AdditiveBonuses
 
 ```plaintext
 加算ボーナス = 100%
@@ -91,7 +93,7 @@
 - 基礎会心補正：`25%`
 - 基礎会心確率：`5%`
 
-#### 部位硬度補正（%） : AppendageHardness
+#### 部位硬度補正 : AppendageHardness
 ```plaintext
 部位硬度補正 = 100% + ダメージ減衰
 ```
@@ -115,12 +117,11 @@
 
 - 本体の部位硬度：`±0`
 
-##### 属性耐性補正 : AttributeResistanceTotal
+#### 属性耐性補正 : AttributeResistanceTotal
 
 ```plaintext
 属性耐性補正 = 100% + 敵属性耐性 + 耐性ダウン
 ```
-
 
 ### 参考
 
@@ -129,7 +130,3 @@
 1. https://www.xenoserieswiki.org/wiki/Custom.WP-MSL-MAG
 1. https://www.xenoserieswiki.org/wiki/Appendage
 
-
-<style>
-@import url("../../assets/css/hatena-design.css");
-</style>

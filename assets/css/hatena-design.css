@@ -13,30 +13,19 @@
     color: #333;
     position: relative;
 
+    font-family: monospace, sans-serif;
+
     white-space: pre;
     /* 空白文字と改行を保持し、折り返さない */
 
-    margin: 0;
-    /* <pre>タグのデフォルトのマージンをリセット */
-    padding: 10px;
-    /* 必要に応じて内側の余白を追加 */
-    white-space: pre;
-    /* 空白文字と改行を保持し、折り返さない */
-    font-family: monospace, sans-serif;
-    /* 等幅フォントを指定 */
-    font-size: 0.9em;
-    /* 必要に応じてフォントサイズを調整 */
     line-height: 1.4;
     /* 必要に応じて行間を調整 */
 
 }
 
-
-
-
 /* 目次関連 */
 .contents {
-    padding: 10px;
+    /*padding: 5px;*/
     font-weight: bold;
 
     /* 見出し部分をクリックしても反応しないようにする */
@@ -46,26 +35,21 @@
 .switch {
     text-decoration: underline;
     cursor: pointer;
-    color: #119E4D;
+    color: #0E7AD9;
     /* タイトルから少し間隔を空ける */
     margin-left: 10px;
 }
 
-.table-of-contents {
-    /* 全体にインデントを付ける */
-    padding-left: 20px;
-}
+.table-of-contents {}
 
 .table-of-contents li {
+    padding-left: 5px;
     margin-top: 5px;
     /* リスト項目間の余白を追加 */
     margin-bottom: 5px;
 }
 
-.table-of-contents ul {
-    /* 子リストのインデントを明確にする */
-    padding-left: 20px;
-}
+.table-of-contents ul {}
 
 
 /* 目次を階層連番にする */
@@ -117,6 +101,9 @@ h5 {
 h3 {
     /* 青色の縦線 */
     border-color: #3498db;
+
+    border-bottom: 1px solid #CFD8D8;
+
     /* h3の文字サイズ */
     font-size: 1.6em;
 }
