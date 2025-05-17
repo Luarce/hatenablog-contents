@@ -808,35 +808,48 @@ a:hover {
     }
 }
 
+.entry-content,
 .markdown-body {
     line-height: 1.85
 }
 
+.entry-content a,
 .markdown-body a {
     color: #119e4d
 }
 
+.entry-content a:hover,
 .markdown-body a:hover {
     color: #0c7037
 }
 
+.entry-content a.keyword,
 .markdown-body a.keyword {
     -webkit-text-decoration: underline dotted #cfd8d8;
     text-decoration: underline dotted #cfd8d8
 }
 
+.entry-content a.keyword:hover,
 .markdown-body a.keyword:hover {
     color: #586767;
     -webkit-text-decoration: underline dotted #ffffff;
     text-decoration: underline dotted #ffffff
 }
 
+.entry-content img,
+.entry-content video,
 .markdown-body img,
 .markdown-body video {
     max-width: 100%;
     height: auto
 }
 
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
@@ -847,36 +860,45 @@ a:hover {
     line-height: 1.3
 }
 
+.entry-content h1,
 .markdown-body h1 {
     padding-bottom: 15px;
     font-size: 190%;
     border-bottom: 1px solid #cfd8d8
 }
 
+.entry-content h2,
 .markdown-body h2 {
     font-size: 165%
 }
 
+.entry-content h3,
 .markdown-body h3 {
     padding-bottom: 10px;
     font-size: 140%;
     border-bottom: 1px solid #cfd8d8
 }
 
+.entry-content h4,
 .markdown-body h4 {
     font-size: 130%
 }
 
+.entry-content h5,
 .markdown-body h5 {
     padding-bottom: 10px;
     font-size: 120%;
     border-bottom: 1px solid #cfd8d8
 }
 
+.entry-content h6,
 .markdown-body h6 {
     font-size: 100%
 }
 
+.entry-content ul,
+.entry-content ol,
+.entry-content dd,
 .markdown-body ul,
 .markdown-body ol,
 .markdown-body dd {
@@ -885,6 +907,12 @@ a:hover {
     line-height: 1.7
 }
 
+.entry-content ul li ul,
+.entry-content ol li ul,
+.entry-content dd li ul,
+.entry-content ul li ol,
+.entry-content ol li ol,
+.entry-content dd li ol,
 .markdown-body ul li ul,
 .markdown-body ol li ul,
 .markdown-body dd li ul,
@@ -894,18 +922,28 @@ a:hover {
     margin-bottom: 0
 }
 
+.entry-content dl,
 .markdown-body dl {
     margin-top: 2em
 }
 
+.entry-content dl dt,
 .markdown-body dl dt {
     margin-bottom: .8em
 }
 
+.entry-content p,
 .markdown-body p {
     margin: 0 0 .7em
 }
 
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content .footnote-number,
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
@@ -916,6 +954,7 @@ a:hover {
     scroll-margin-top: 56px
 }
 
+.entry-content blockquote,
 .markdown-body blockquote {
     position: relative;
     padding: 9px 15px 9px 40px;
@@ -923,11 +962,14 @@ a:hover {
 }
 
 @media (min-width: 1020px) {
+
+    .entry-content blockquote,
     .markdown-body blockquote {
         padding: 20px 20px 20px 60px
     }
 }
 
+.entry-content blockquote:before,
 .markdown-body blockquote:before {
     display: inline-block;
     position: absolute;
@@ -942,16 +984,20 @@ a:hover {
 }
 
 @media (min-width: 1020px) {
+
+    .entry-content blockquote:before,
     .markdown-body blockquote:before {
         left: 15px;
         font-size: 70px
     }
 }
 
+.entry-content blockquote p,
 .markdown-body blockquote p {
     margin-bottom: 0
 }
 
+.entry-content blockquote cite,
 .markdown-body blockquote cite {
     display: block;
     margin-top: .5rem;
@@ -960,6 +1006,7 @@ a:hover {
     line-height: 1.3
 }
 
+.entry-content table,
 .markdown-body table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -970,21 +1017,27 @@ a:hover {
     display: block
 }
 
+.entry-content table th,
+.entry-content table td,
 .markdown-body table th,
 .markdown-body table td {
     border: 1px solid #f0f1f1;
     padding: 5px 10px
 }
 
+.entry-content table th,
 .markdown-body table th {
     background: #f9fafb
 }
 
+.entry-content pre,
+.entry-content code,
 .markdown-body pre,
 .markdown-body code {
     font-family: Monaco, Consolas, Courier New, Courier, monospace, sans-serif
 }
 
+.entry-content pre,
 .markdown-body pre {
     background: #293030;
     border: none;
@@ -997,12 +1050,15 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+
+    .entry-content pre,
     .markdown-body pre {
         font-size: .85rem;
         padding: 15px
     }
 }
 
+.entry-content pre>code,
 .markdown-body pre>code {
     margin: 0;
     padding: 0;
@@ -1012,6 +1068,7 @@ a:hover {
     font-family: Monaco, Consolas, Courier New, Courier, monospace, sans-serif
 }
 
+.entry-content code,
 .markdown-body code {
     font-size: 90%;
     margin: 0 .1em;
@@ -1019,6 +1076,7 @@ a:hover {
     border-radius: 3px
 }
 
+.entry-content .table-of-contents,
 .markdown-body .table-of-contents {
     background: #f9fafb;
     margin-left: 0;
@@ -1027,6 +1085,8 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+
+    .entry-content .table-of-contents,
     .markdown-body .table-of-contents {
         padding: 20px 20px 20px 50px
     }

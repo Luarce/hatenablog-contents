@@ -164,8 +164,6 @@ ul.table-of-contents,
             font-weight: bold;
         }
 
-
-
         tbody tr:nth-child(odd) {
             /* 奇数行の背景色 */
             background-color: #f9f9f9;
