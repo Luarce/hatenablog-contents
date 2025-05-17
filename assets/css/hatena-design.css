@@ -125,6 +125,7 @@ ul.table-of-contents,
         border-left: 4px solid #f39c12;
     }
 
+
     /* テーブルスタイル */
     table {
         /* ボーダーを重ねて表示 */
@@ -132,49 +133,59 @@ ul.table-of-contents,
         border-collapse: collapse;
         /* 上部に余白を追加 */
         margin-bottom: 10px;
+
+
+        th,
+        td {
+            /* 中央揃え */
+            text-align: center;
+            /* セルのボーダーを追加 */
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            /* カラムは改行無し */
+            white-space: nowrap;
+            /* 見出しを太字に */
+            font-weight: bold;
+            /* ヘッダーの背景色 */
+            background: #f2f2f2;
+            /* ヘッダーの背景色を変更 */
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            /* 一番左の列は改行無し */
+            white-space: nowrap;
+            /* 一番左の列は中央揃え */
+            text-align: center;
+            /* 一番左の列は太字 */
+            font-weight: bold;
+        }
+
+
+
+        tbody tr:nth-child(odd) {
+            /* 奇数行の背景色 */
+            background-color: #f9f9f9;
+            /* 交互の背景色を設定 */
+        }
+
+        tbody tr:nth-child(even) {
+            /* 偶数行の背景色 */
+            background-color: #ffffff;
+            /* 交互の背景色を設定 */
+        }
     }
 
-    th,
-    td {
-        /* 中央揃え */
-        text-align: center;
-        /* セルのボーダーを追加 */
-        background-color: white;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
-
-    th {
-        /* カラムは改行無し */
-        white-space: nowrap;
-
-        background-color: #f0f0f0;
-        /* 見出し行の背景色 */
-        font-weight: bold;
-        /* 見出しを太字に */
-        border-bottom: 2px solid #333;
-        /* 見出しの下に太いボーダー */
-    }
-
-    th:nth-child(1),
-    td:nth-child(1) {
-        /* 一番左の列は改行無し */
-        white-space: nowrap;
-        /* 一番左の列は中央揃え */
-        text-align: center;
-    }
-
-    thead {
-        /* ヘッダーの背景色 */
-        background-color: #f8f8f8;
-    }
 
     /* 画像に枠線をつける */
-    .entry-content img {
+    img {
         border: 1px solid rgba(0, 0, 0, 0.5);
     }
 
-    .entry-content a {
+    a {
         text-decoration: underline;
     }
 

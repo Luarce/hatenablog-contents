@@ -1,21 +1,17 @@
- /* はてな用デザインCSSのインポート */
- @import url("../assets/css/hatena-design.css");
+/* smoothのmarkdown版をインポート */
 
- /* vscode用のcss */
- body,
- .markdown-body {
-     background-color: white;
-     color: rgb(0, 0, 0);
+/* ブラウザで検証→sourcesから取得し、
+entry-contentをmarkdown-bodyに置換 */
+@import url("smooth-markdown-body.css");
 
-     h3 {
-         font-size: 17px;
-     }
+/* はてな用デザインCSSのインポート */
+@import url("../assets/css/hatena-design.css");
 
-     h4 {
-         font-size: 16px;
-     }
 
-     h5 {
-         font-size: 15px;
-     }
- }
+/* vscode用のcss */
+body,
+.markdown-body {
+    /* ライトモードにする */
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
