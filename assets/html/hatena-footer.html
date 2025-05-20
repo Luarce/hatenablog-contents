@@ -87,3 +87,77 @@
     }
   });
 </script>
+
+<script>
+  // GitHubリポジトリのrawコンテンツのベースURL
+  const GITHUB_RAW_BASE_URL =
+    "https://raw.githubusercontent.com/Luarce/hatenablog-contents/heads/develop/";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // ページ内のすべての img タグを取得
+    const imgElements = document.querySelectorAll("img");
+
+    imgElements.forEach((imgElement) => {
+      // imgタグに書かれている生の src 属性値
+      const originalSrc = imgElement.getAttribute("src");
+
+      // 既に絶対URL (http://, https://, // で始まる) なら処理をスキップ
+      if (
+        originalSrc.startsWith("http://") ||
+        originalSrc.startsWith("https://") ||
+        originalSrc.startsWith("//")
+      ) {
+        return;
+      }
+
+      try {
+        // STEP 1: オリジナルの相対パスを、現在のページのURLを基準にして絶対パスに解決する
+        // window.location.href は、JavaScriptが実行されているHTMLページのURLです。
+        // MarkdownがHTMLに変換され、そのHTMLがブラウザで開かれている場合、
+        // この URL が相対パスの解決基準となります。
+        const resolvedAbsoluteUrl = new URL(originalSrc, window.location.href);
+
+        // STEP 2: 解決されたURLのパス部分から、GitHubリポジトリ内の相対パスを抽出する
+        // 例: https://your-user.github.io/your-repo/assets/image.png から
+        // "your-repo/assets/image.png" を抽出する
+        // または、GitHub Pagesのカスタムドメインの場合: /assets/image.png
+
+        // GITHUB_RAW_BASE_URLからリポジトリ名を取得 (例: "your-repo-name")
+        const repoName = GITHUB_RAW_BASE_URL.split("/")[4];
+        const repoPathPrefix = `/${repoName}/`; // 例: "/your-repo-name/"
+
+        let relativePathFromRepoRoot = "";
+        const pathname = resolvedAbsoluteUrl.pathname;
+
+        if (pathname.startsWith(repoPathPrefix)) {
+          // パスがリポジトリ名で始まる場合 (例: /your-repo-name/assets/...)
+          relativePathFromRepoRoot = pathname.substring(repoPathPrefix.length);
+        } else if (pathname.startsWith("/")) {
+          // パスがルートスラッシュのみで始まる場合 (カスタムドメインなど)
+          relativePathFromRepoRoot = pathname.substring(1);
+        } else {
+          // その他の場合 (これは稀だが、念のため)
+          relativePathFromRepoRoot = pathname;
+        }
+
+        // STEP 3: 抽出したリポジトリ内のパスを、GitHub RawのベースURLと結合する
+        const finalGithubRawUrl = new URL(
+          relativePathFromRepoRoot,
+          GITHUB_RAW_BASE_URL
+        );
+
+        // img タグの src を更新
+        imgElement.src = finalGithubRawUrl.href;
+        console.log(
+          `Original: ${originalSrc} -> Converted: ${finalGithubRawUrl.href}`
+        );
+      } catch (error) {
+        console.error(
+          `画像の src "${originalSrc}" の変換中にエラーが発生しました:`,
+          error
+        );
+        // エラーが発生した場合は、元の src を維持するなど、適切なフォールバック処理を行う
+      }
+    });
+  });
+</script>

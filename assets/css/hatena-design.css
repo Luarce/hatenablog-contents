@@ -219,8 +219,8 @@ ul.table-of-contents,
         margin-top: 10px;
     }
 
-    /* youtube埋め込み */
-    .box_youtube {
+    /* 動画プレイヤー埋め込み */
+    .box_player {
         aspect-ratio: 16/9;
     }
 

@@ -1,19 +1,13 @@
-<div class="thumbnail">
-
 ![負けヒロインが多すぎる！](../../assets/images/anime-reviews/makeine_title.png)
-
-</div>
-
 
 自分が見た2024年夏アニメの感想を書いていく。  
 今期はなぜかラブコメ学園ものが多い。
-
 
 [:contents]
 
 ### 時々ボソッとロシア語でデレる隣のアーリャさん
 
-<div class="box_youtube">
+<div class="box_player">
 
 [https://youtu.be/Fj2GF_Q_Fho?si=zw2f3bTW_kCgXaX2:embed]
 
@@ -121,7 +115,7 @@
 
 ※すべて[<u>公式Youtubeチャンネル</u>](https://www.youtube.com/channel/UCvNxYM7Cwrz8p7_WjzjxWcA)にて無料配信中
 
-<div class="box_youtube">
+<div class="box_player">
 [https://youtu.be/YbKqZF3wc5g?si=DOoxVa0mh796s78G:embed]
 </div>
 
@@ -139,7 +133,7 @@
 
 ### 2.5次元の誘惑
 
-<div class="box_youtube">
+<div class="box_player">
 [https://youtu.be/pN8EE8d9yYE:embed]
 </div>
 
@@ -153,7 +147,7 @@ ED**Watch Me**がテンポ良く、個人的にかなり好み。
 
 ### 負けヒロインが多すぎる！
 
-<div class="box_youtube">
+<div class="box_player">
 [https://youtu.be/uytJ6_KTCZI?si=xjICjbDc0zgSTzNT:embed]
 </div>
 
@@ -174,7 +168,7 @@ ED**Watch Me**がテンポ良く、個人的にかなり好み。
 
 ### しかのこのこのここしたんたん
 
-<div class="box_youtube">
+<div class="box_player">
 [https://youtu.be/ITFklIWu0Wg?si=LnQ_DAoxHWSiW1WE:embed]
 </div>
 
@@ -189,10 +183,3 @@ ED**Watch Me**がテンポ良く、個人的にかなり好み。
 
 
 <div style="text-align: center"><b>おわり</b></div>
-
-<!-- 記事タイトル：アニメ感想（2024夏） -->
-
-<!-- css -->
-<style>
-@import url("../../assets/css/hatena-design.css")
-</style>
