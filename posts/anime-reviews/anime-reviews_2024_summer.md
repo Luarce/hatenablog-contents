@@ -1,14 +1,22 @@
-<img class="thumbnail" src="https://raw.githubusercontent.com/Luarce/hatenablog-contents/main/assets/images/anime-reviews/makeine_title.png" alt="負けヒロインが多すぎる！">
+<div class="thumbnail">
+
+![負けヒロインが多すぎる！](../../assets/images/anime-reviews/makeine_title.png)
+
+</div>
+
 
 自分が見た2024年夏アニメの感想を書いていく。  
 今期はなぜかラブコメ学園ものが多い。
+
 
 [:contents]
 
 ### 時々ボソッとロシア語でデレる隣のアーリャさん
 
 <div class="box_youtube">
+
 [https://youtu.be/Fj2GF_Q_Fho?si=zw2f3bTW_kCgXaX2:embed]
+
 </div>
 
 通称**ロシデレ**。原作は角川スニーカー文庫のライトノベル。
